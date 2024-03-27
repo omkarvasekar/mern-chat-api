@@ -119,7 +119,7 @@ app.post('/register', async (req,res) => {
 
 const server = app.listen(4040);
 
-const wss = new ws.WebSocketServer('server');
+const wss = new ws.WebSocketServer({server});
 wss.on('connection', (connection, req) => {
 
   function notifyAboutOnlinePeople() {
