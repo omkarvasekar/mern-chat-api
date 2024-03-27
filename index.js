@@ -119,7 +119,7 @@ app.post('/register', async (req,res) => {
 
 const server = app.listen(4040);
 
-const wss = new ws.WebSocketServer('ws:https://52.9.248.183:4040');
+const wss = new ws.WebSocketServer('ws://52.9.248.183:4040');
 wss.on('connection', (connection, req) => {
 
   function notifyAboutOnlinePeople() {
